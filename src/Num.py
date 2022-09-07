@@ -51,17 +51,6 @@ class Num:
                 self.isSorted = False
                 self._has[pos] = v
 
-    def per(self, t, p):
-
-        '''
-                        Return the pth item from the sorted list 't'
-                        Arguments:
-                            p: Denotes index
-                            t: Denotes sorted list
-        '''
-        p = math.floor(((p or 0.5) * len(t)) + 0.5)
-        return t[math.max(1, math.min(len(t), p))]
-
 
     def div(self):
         '''
@@ -77,35 +66,3 @@ class Num:
         '''
         return self.per(self.nums(),0.5)
 
-    def o(self,t):
-        '''
-                        Generates a string from nested list
-                        Arguments:
-                            t: Denotes list of values
-        '''
-
-        if type(t) != list:
-            return str(t)
-
-        def show(self,k, v):
-            if str(k).find('^_') == -1:
-                v = self.o(v)
-                return len(t) == 0 and format(':{} {}', k, v) or str(v)
-
-        u = []
-        index = 0
-        dict_keys = list(t.keys())
-        for key in dict_keys:
-            u[index] = show(key, t[key])
-        if len(t) == 0:
-            u.sort()
-        return '{' + ' '.join(str(item) for item in u) + '}'
-
-    def oo(self,t):
-        '''
-                        Prints the string from o()
-                        Arguments:
-                            t: Denotes list of values
-        '''
-        print(self.o(t))
-        return t
