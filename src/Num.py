@@ -14,10 +14,10 @@ class Num:
             c: column position
             s: column name
         '''
-    def __int__(self,c,s):
+    def __int__(self, c=0, s=""):
         self.n=0
-        self.at = c if c else 0
-        self.name = s if s else ""
+        self.at = c
+        self.name = s
         lo= math.inf
         high = - math.inf
         self._has = {}
